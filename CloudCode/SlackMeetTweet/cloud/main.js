@@ -9,7 +9,7 @@ Parse.Cloud.define("tweet", function(req, res) {
   var tweetIndex;
 
   // Fetch params
-  var username = req.parmas.user_name;
+  var username = req.params.user_name;
 
   // Parse payload
   var payload = req.params.text;
@@ -46,7 +46,7 @@ Parse.Cloud.define("tweet", function(req, res) {
       tweet.set("slot", tweetIndex);
     }
     tweet.set("payload", payload);
-    tweet.set("user", username);
+    tweet.set("username", username);
     tweet.set("mime", payloadMime);
     return tweet.save();
   // Success

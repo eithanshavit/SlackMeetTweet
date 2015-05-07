@@ -20,9 +20,9 @@
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nyf-32-9Ht" userLabel="barView">
                                 <rect key="frame" x="0.0" y="678" width="1024" height="90"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="on Aug 12th 08:15am" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fy7-Oe-Eyh" userLabel="dateLabel">
-                                        <rect key="frame" x="156" y="29" width="254" height="33"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="28"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="on Aug 12th 08:15am" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fy7-Oe-Eyh" userLabel="dateLabel">
+                                        <rect key="frame" x="156" y="32" width="254" height="33"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="24"/>
                                         <color key="textColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -45,10 +45,10 @@
                                     <constraint firstItem="1CN-Mx-vqY" firstAttribute="trailing" secondItem="Nyf-32-9Ht" secondAttribute="trailing" constant="-40" id="CNp-Ux-h2b"/>
                                     <constraint firstItem="GJr-hk-4yb" firstAttribute="leading" secondItem="Nyf-32-9Ht" secondAttribute="leading" constant="40" id="MtJ-To-sEz"/>
                                     <constraint firstAttribute="centerY" secondItem="1CN-Mx-vqY" secondAttribute="centerY" id="PuA-9l-RYW"/>
-                                    <constraint firstAttribute="centerY" secondItem="Fy7-Oe-Eyh" secondAttribute="centerY" id="VQb-6i-NOs"/>
-                                    <constraint firstItem="Fy7-Oe-Eyh" firstAttribute="leading" secondItem="GJr-hk-4yb" secondAttribute="trailing" constant="20" id="gXG-vC-CL9"/>
+                                    <constraint firstItem="Fy7-Oe-Eyh" firstAttribute="leading" secondItem="GJr-hk-4yb" secondAttribute="trailing" constant="30" id="gXG-vC-CL9"/>
                                     <constraint firstAttribute="height" constant="90" id="jxM-Ft-gtn"/>
                                     <constraint firstAttribute="centerY" secondItem="GJr-hk-4yb" secondAttribute="centerY" id="sNN-Ii-4cG"/>
+                                    <constraint firstItem="Fy7-Oe-Eyh" firstAttribute="baseline" secondItem="GJr-hk-4yb" secondAttribute="baseline" id="uIL-Z6-mzp"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;last week's party was awesome!!!&quot;" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="59" translatesAutoresizingMaskIntoConstraints="NO" id="Zgh-pH-1UH" userLabel="contentLabel">
@@ -92,6 +92,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="barView" destination="Nyf-32-9Ht" id="qnh-kP-ubZ"/>
                         <outlet property="contentLabel" destination="Zgh-pH-1UH" id="ijb-9h-uKR"/>
                         <outlet property="dateLabel" destination="Fy7-Oe-Eyh" id="Di5-9P-aPM"/>
                         <outlet property="imageView" destination="gLU-bu-K5X" id="9b8-V4-tTG"/>
