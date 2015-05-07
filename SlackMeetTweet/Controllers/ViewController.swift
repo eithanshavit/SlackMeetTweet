@@ -32,7 +32,7 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     fetchTweet()
-    timer = Timer(interval: 15, repeat: true, repeatCount: nil) {
+    timer = Timer(interval: 5, repeat: true, repeatCount: nil) {
       self.fetchTweet()
     }
     timer.start()
@@ -56,19 +56,107 @@ class ViewController: UIViewController {
     }).continueWithSuccessBlock({
       (task: BFTask!) -> BFTask! in
       let tweet = task.result as! Tweet
-      self.displayTweet(tweet)
+      self.tweetFetched(tweet)
       return nil
     })
   }
   
   // MARK: - UI
   
+  func tweetFetched(tweet: Tweet) {
+    self.displayTweet(tweet)
+  }
+  
   func displayTweet(tweet: Tweet) {
-    println("displaying tweet - \(tweet.payload)")
+    switch tweet.mime {
+    case "text/plain":
+      displayTextTweet(tweet)
+    case "image/jpeg":
+      displayImageTweet(tweet)
+    default:
+      assertionFailure("\(tweet.mime) mime type not allowed")
+    }
+  }
+  
+  func displayTextTweet(tweet: Tweet) {
     mainExec {
+      self.displayContentLabel(tweet.payload)
       self.hideLoader()
       self.displayBar(tweet)
     }
+  }
+  
+  func displayImageTweet(tweet: Tweet) {
+    dataSync.downloadImage(tweet.payload).continueWithSuccessBlock {
+      (task: BFTask!) -> BFTask! in
+      let uiImage = task.result as! UIImage
+      self.mainExec {
+        self.displayImage(uiImage)
+        self.hideLoader()
+        self.displayBar(tweet)
+      }
+      return nil
+    }
+    
+  }
+  
+  func displayImage(image: UIImage) {
+    UIView.animateWithDuration(
+      0.3,
+      delay: 0,
+      options: UIViewAnimationOptions.CurveEaseIn,
+      animations: {
+        () -> Void in
+        self.contentLabel.alpha = 0
+        self.imageView.alpha = 0
+      },
+      completion: {
+        (finished) -> Void in
+        self.imageView.image = image
+        UIView.animateWithDuration(
+          0.5,
+          delay: 0,
+          options: UIViewAnimationOptions.CurveEaseIn,
+          animations: {
+            () -> Void in
+            self.imageView.alpha = 1
+          },
+          completion: {
+            (finished) -> Void in
+          }
+        )
+      }
+    )
+    
+  }
+  
+  func displayContentLabel(text: String) {
+    UIView.animateWithDuration(
+      0.3,
+      delay: 0,
+      options: UIViewAnimationOptions.CurveEaseIn,
+      animations: {
+        () -> Void in
+        self.contentLabel.alpha = 0
+        self.imageView.alpha = 0
+      },
+      completion: {
+        (finished) -> Void in
+        self.contentLabel.text = text
+        UIView.animateWithDuration(
+          0.5,
+          delay: 0,
+          options: UIViewAnimationOptions.CurveEaseIn,
+          animations: {
+            () -> Void in
+            self.contentLabel.alpha = 1
+          },
+          completion: {
+            (finished) -> Void in
+          }
+        )
+      }
+    )
   }
   
   func displayBar(tweet: Tweet) {
@@ -79,7 +167,7 @@ class ViewController: UIViewController {
     let dateString = formatter.stringFromDate(tweet.updatedAt!)
     
     UIView.animateWithDuration(
-      0.1,
+      0.3,
       delay: 0,
       options: UIViewAnimationOptions.CurveEaseIn,
       animations: {
@@ -93,9 +181,9 @@ class ViewController: UIViewController {
         self.userLabel.text = "@" + tweet.username
         self.dateLabel.text = "on " + dateString
         UIView.animateWithDuration(
-          0.1,
+          0.3,
           delay: 0,
-          options: UIViewAnimationOptions.CurveEaseIn,
+          options: UIViewAnimationOptions.CurveEaseOut,
           animations: {
             () -> Void in
             self.userLabel.alpha = 1

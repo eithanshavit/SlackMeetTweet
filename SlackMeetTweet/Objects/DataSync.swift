@@ -22,7 +22,7 @@ class DataSync: NSObject {
     return Singleton.instance
   }
   
-  // MARK: - Fetch
+  // MARK: - Fetch Data  
   
   func fetchPointer() -> BFTask {
     let query = Pointer.query()!
@@ -87,6 +87,25 @@ class DataSync: NSObject {
       return nil
     }
     
+  }
+  
+  // MARK: - Downloads
+  
+  func downloadImage(url: String) -> BFTask {
+    var task = BFTaskCompletionSource()
+    let url = NSURL(string: url)!
+    let downloadTask = NSURLSession.sharedSession().downloadTaskWithURL(url) {
+      (location: NSURL!, response: NSURLResponse!, error: NSError!) -> Void in
+      if (error != nil) {
+        task.setError(error)
+      }
+      else {
+        let uiImage = UIImage(data: NSData(contentsOfURL: location)!)
+        task.setResult(uiImage)
+      }
+    }
+    downloadTask.resume()
+    return task.task
   }
   
   // MARK: - Error handling
