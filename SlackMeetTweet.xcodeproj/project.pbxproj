@@ -8,13 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		D0996BC41AFB2ACB00DB16C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0996BC31AFB2ACB00DB16C5 /* AppDelegate.swift */; };
-		D0996BC61AFB2ACB00DB16C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0996BC51AFB2ACB00DB16C5 /* ViewController.swift */; };
 		D0996BC91AFB2ACB00DB16C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0996BC71AFB2ACB00DB16C5 /* Main.storyboard */; };
 		D0996BCB1AFB2ACB00DB16C5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0996BCA1AFB2ACB00DB16C5 /* Images.xcassets */; };
 		D0996BCE1AFB2ACB00DB16C5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0996BCC1AFB2ACB00DB16C5 /* LaunchScreen.xib */; };
 		D0996BDA1AFB2ACB00DB16C5 /* SlackMeetTweetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0996BD91AFB2ACB00DB16C5 /* SlackMeetTweetTests.swift */; };
-		D0DE20051AFB2F6C000DF943 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DE20031AFB2F6C000DF943 /* Bolts.framework */; };
-		D0DE20061AFB2F6C000DF943 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DE20041AFB2F6C000DF943 /* Parse.framework */; };
 		D0DE20081AFB2F8D000DF943 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DE20071AFB2F8D000DF943 /* AudioToolbox.framework */; };
 		D0DE200A1AFB2F96000DF943 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DE20091AFB2F96000DF943 /* CFNetwork.framework */; };
 		D0DE200C1AFB2FA6000DF943 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DE200B1AFB2FA6000DF943 /* CoreGraphics.framework */; };
@@ -26,6 +23,13 @@
 		D0DE20181AFB2FDF000DF943 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DE20171AFB2FDF000DF943 /* SystemConfiguration.framework */; };
 		D0DE201A1AFB2FE7000DF943 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DE20191AFB2FE7000DF943 /* libz.dylib */; };
 		D0DE201C1AFB2FEE000DF943 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DE201B1AFB2FEE000DF943 /* libsqlite3.dylib */; };
+		D0DE20201AFBFAEA000DF943 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DE201E1AFBFAEA000DF943 /* Bolts.framework */; };
+		D0DE20211AFBFAEA000DF943 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DE201F1AFBFAEA000DF943 /* Parse.framework */; };
+		D0DE20261AFBFB41000DF943 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DE20251AFBFB41000DF943 /* Timer.swift */; };
+		D0DE20281AFBFB56000DF943 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DE20271AFBFB56000DF943 /* ViewController.swift */; };
+		D0DE202B1AFBFBC7000DF943 /* DataSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DE202A1AFBFBC7000DF943 /* DataSync.swift */; };
+		D0DE20301AFBFE4B000DF943 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DE202F1AFBFE4B000DF943 /* Tweet.swift */; };
+		D0DE20321AFBFF5E000DF943 /* Pointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DE20311AFBFF5E000DF943 /* Pointer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,15 +46,12 @@
 		D0996BBE1AFB2ACB00DB16C5 /* SlackMeetTweet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlackMeetTweet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0996BC21AFB2ACB00DB16C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0996BC31AFB2ACB00DB16C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D0996BC51AFB2ACB00DB16C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D0996BC81AFB2ACB00DB16C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0996BCA1AFB2ACB00DB16C5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D0996BCD1AFB2ACB00DB16C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D0996BD31AFB2ACB00DB16C5 /* SlackMeetTweetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlackMeetTweetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0996BD81AFB2ACB00DB16C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0996BD91AFB2ACB00DB16C5 /* SlackMeetTweetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlackMeetTweetTests.swift; sourceTree = "<group>"; };
-		D0DE20031AFB2F6C000DF943 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		D0DE20041AFB2F6C000DF943 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		D0DE20071AFB2F8D000DF943 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D0DE20091AFB2F96000DF943 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		D0DE200B1AFB2FA6000DF943 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -62,6 +63,14 @@
 		D0DE20171AFB2FDF000DF943 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D0DE20191AFB2FE7000DF943 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		D0DE201B1AFB2FEE000DF943 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		D0DE201E1AFBFAEA000DF943 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Frameworks/Bolts.framework; sourceTree = "<group>"; };
+		D0DE201F1AFBFAEA000DF943 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Frameworks/Parse.framework; sourceTree = "<group>"; };
+		D0DE20251AFBFB41000DF943 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Timer.swift; path = Utils/Timer.swift; sourceTree = "<group>"; };
+		D0DE20271AFBFB56000DF943 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Controllers/ViewController.swift; sourceTree = "<group>"; };
+		D0DE202A1AFBFBC7000DF943 /* DataSync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataSync.swift; path = Objects/DataSync.swift; sourceTree = "<group>"; };
+		D0DE202C1AFBFE12000DF943 /* SlackMeetTweet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SlackMeetTweet-Bridging-Header.h"; sourceTree = "<group>"; };
+		D0DE202F1AFBFE4B000DF943 /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tweet.swift; path = Objects/Tweet.swift; sourceTree = "<group>"; };
+		D0DE20311AFBFF5E000DF943 /* Pointer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pointer.swift; path = Objects/Pointer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,16 +81,16 @@
 				D0DE201C1AFB2FEE000DF943 /* libsqlite3.dylib in Frameworks */,
 				D0DE201A1AFB2FE7000DF943 /* libz.dylib in Frameworks */,
 				D0DE20181AFB2FDF000DF943 /* SystemConfiguration.framework in Frameworks */,
+				D0DE20201AFBFAEA000DF943 /* Bolts.framework in Frameworks */,
 				D0DE20161AFB2FD7000DF943 /* StoreKit.framework in Frameworks */,
 				D0DE20141AFB2FCF000DF943 /* Security.framework in Frameworks */,
+				D0DE20211AFBFAEA000DF943 /* Parse.framework in Frameworks */,
 				D0DE20121AFB2FC7000DF943 /* QuartzCore.framework in Frameworks */,
 				D0DE20101AFB2FBD000DF943 /* MobileCoreServices.framework in Frameworks */,
 				D0DE200E1AFB2FAE000DF943 /* CoreLocation.framework in Frameworks */,
 				D0DE200C1AFB2FA6000DF943 /* CoreGraphics.framework in Frameworks */,
 				D0DE200A1AFB2F96000DF943 /* CFNetwork.framework in Frameworks */,
 				D0DE20081AFB2F8D000DF943 /* AudioToolbox.framework in Frameworks */,
-				D0DE20061AFB2F6C000DF943 /* Parse.framework in Frameworks */,
-				D0DE20051AFB2F6C000DF943 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,12 +127,13 @@
 		D0996BC01AFB2ACB00DB16C5 /* SlackMeetTweet */ = {
 			isa = PBXGroup;
 			children = (
+				D0DE20241AFBFB17000DF943 /* Objects */,
+				D0DE20231AFBFB0D000DF943 /* Controllers */,
+				D0DE20221AFBFB05000DF943 /* Views */,
+				D0DE201D1AFBFAA6000DF943 /* Utils */,
 				D0DE20021AFB2F4B000DF943 /* Frameworks */,
 				D0996BC31AFB2ACB00DB16C5 /* AppDelegate.swift */,
-				D0996BC51AFB2ACB00DB16C5 /* ViewController.swift */,
-				D0996BC71AFB2ACB00DB16C5 /* Main.storyboard */,
-				D0996BCA1AFB2ACB00DB16C5 /* Images.xcassets */,
-				D0996BCC1AFB2ACB00DB16C5 /* LaunchScreen.xib */,
+				D0DE20291AFBFB90000DF943 /* Assets */,
 				D0996BC11AFB2ACB00DB16C5 /* Supporting Files */,
 			);
 			path = SlackMeetTweet;
@@ -132,6 +142,7 @@
 		D0996BC11AFB2ACB00DB16C5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D0DE202C1AFBFE12000DF943 /* SlackMeetTweet-Bridging-Header.h */,
 				D0996BC21AFB2ACB00DB16C5 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -157,6 +168,8 @@
 		D0DE20021AFB2F4B000DF943 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D0DE201E1AFBFAEA000DF943 /* Bolts.framework */,
+				D0DE201F1AFBFAEA000DF943 /* Parse.framework */,
 				D0DE20171AFB2FDF000DF943 /* SystemConfiguration.framework */,
 				D0DE20151AFB2FD7000DF943 /* StoreKit.framework */,
 				D0DE20131AFB2FCF000DF943 /* Security.framework */,
@@ -166,10 +179,51 @@
 				D0DE200B1AFB2FA6000DF943 /* CoreGraphics.framework */,
 				D0DE20091AFB2F96000DF943 /* CFNetwork.framework */,
 				D0DE20071AFB2F8D000DF943 /* AudioToolbox.framework */,
-				D0DE20031AFB2F6C000DF943 /* Bolts.framework */,
-				D0DE20041AFB2F6C000DF943 /* Parse.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0DE201D1AFBFAA6000DF943 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D0DE20251AFBFB41000DF943 /* Timer.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		D0DE20221AFBFB05000DF943 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D0996BCC1AFB2ACB00DB16C5 /* LaunchScreen.xib */,
+				D0996BC71AFB2ACB00DB16C5 /* Main.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D0DE20231AFBFB0D000DF943 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D0DE20271AFBFB56000DF943 /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D0DE20241AFBFB17000DF943 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				D0DE202A1AFBFBC7000DF943 /* DataSync.swift */,
+				D0DE202F1AFBFE4B000DF943 /* Tweet.swift */,
+				D0DE20311AFBFF5E000DF943 /* Pointer.swift */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		D0DE20291AFBFB90000DF943 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				D0996BCA1AFB2ACB00DB16C5 /* Images.xcassets */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,8 +326,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0996BC61AFB2ACB00DB16C5 /* ViewController.swift in Sources */,
+				D0DE202B1AFBFBC7000DF943 /* DataSync.swift in Sources */,
+				D0DE20301AFBFE4B000DF943 /* Tweet.swift in Sources */,
+				D0DE20281AFBFB56000DF943 /* ViewController.swift in Sources */,
 				D0996BC41AFB2ACB00DB16C5 /* AppDelegate.swift in Sources */,
+				D0DE20261AFBFB41000DF943 /* Timer.swift in Sources */,
+				D0DE20321AFBFF5E000DF943 /* Pointer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,13 +460,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SlackMeetTweet",
+					"$(PROJECT_DIR)/SlackMeetTweet/Frameworks",
 				);
 				INFOPLIST_FILE = SlackMeetTweet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SlackMeetTweet/SlackMeetTweet-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -416,13 +478,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SlackMeetTweet",
+					"$(PROJECT_DIR)/SlackMeetTweet/Frameworks",
 				);
 				INFOPLIST_FILE = SlackMeetTweet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SlackMeetTweet/SlackMeetTweet-Bridging-Header.h";
 			};
 			name = Release;
 		};
