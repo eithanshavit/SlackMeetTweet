@@ -8,6 +8,9 @@ Parse.Cloud.define("tweet", function(req, res) {
   // Hold index
   var tweetIndex;
 
+  // Fetch params
+  var username = req.parmas.user_name;
+
   // Parse payload
   var payload = req.params.text;
   var jpgUrlExpression = "https?:\\\/\\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,4}\\b([-a-zA-Z0-9@:%_\\+.~#?&\/\/=]*.[jJ][pP][Ee]?[gG])";
@@ -43,6 +46,7 @@ Parse.Cloud.define("tweet", function(req, res) {
       tweet.set("slot", tweetIndex);
     }
     tweet.set("payload", payload);
+    tweet.set("user", username);
     tweet.set("mime", payloadMime);
     return tweet.save();
   // Success
