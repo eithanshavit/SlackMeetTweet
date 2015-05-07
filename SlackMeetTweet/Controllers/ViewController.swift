@@ -15,7 +15,6 @@ class ViewController: UIViewController {
   
   var index: Int = -1
   var dataSync = DataSync.sharedInstance
-  var timer: Timer!
   
   // MARK: Outlets
   
@@ -31,11 +30,21 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    fetchTweet()
-    timer = Timer(interval: 5, repeat: true, repeatCount: nil) {
+    
+    // Fetch tweets at intervals
+    delayExec(2.5) {
       self.fetchTweet()
     }
-    timer.start()
+    let tweetTimer = Timer(interval: 10, repeat: true, repeatCount: nil) {
+      self.fetchTweet()
+    }
+    tweetTimer.start()
+    
+    // Fetch vacancy at intervals
+    let vacancyTimer = Timer(interval: 1, repeat: true, repeatCount: nil) {
+      self.fetchVacancy()
+    }
+    vacancyTimer.start()
   }
   
   override func didReceiveMemoryWarning() {
@@ -44,6 +53,17 @@ class ViewController: UIViewController {
   }
   
   // MARK: - Data
+  
+  func fetchVacancy() {
+    dataSync.fetchVacancy().continueWithSuccessBlock {
+      (task: BFTask!) -> BFTask! in
+      let vacancy = task.result as! Vacancy
+      self.mainExec {
+        self.vacancyFetched(vacancy)
+      }
+      return nil
+    }
+  }
   
   func fetchTweet() {
     // First count tweets
@@ -62,6 +82,17 @@ class ViewController: UIViewController {
   }
   
   // MARK: - UI
+  
+  func vacancyFetched(vacancy: Vacancy) {
+    switch vacancy.vacancy {
+    case .vacant:
+      indicatorImageView.image = UIImage(named: "ledGreen")
+    case .pending:
+      indicatorImageView.image = UIImage(named: "ledYellow")
+    case .booked:
+      indicatorImageView.image = UIImage(named: "ledRed")
+    }
+  }
   
   func tweetFetched(tweet: Tweet) {
     self.displayTweet(tweet)
@@ -97,10 +128,10 @@ class ViewController: UIViewController {
       }
       return nil
     }
-    
   }
   
   func displayImage(image: UIImage) {
+    // Fade image out and in
     UIView.animateWithDuration(
       0.3,
       delay: 0,
@@ -131,6 +162,7 @@ class ViewController: UIViewController {
   }
   
   func displayContentLabel(text: String) {
+    // Fade content out and in
     UIView.animateWithDuration(
       0.3,
       delay: 0,
@@ -166,6 +198,7 @@ class ViewController: UIViewController {
     formatter.timeStyle = .ShortStyle
     let dateString = formatter.stringFromDate(tweet.updatedAt!)
     
+    // Fade in bar and labels
     UIView.animateWithDuration(
       0.3,
       delay: 0,
@@ -212,9 +245,20 @@ class ViewController: UIViewController {
     )
   }
   
+  // MARK: - Utils
+  
+  // Dispatch on main queue
   func mainExec(closure: ()->()) {
     dispatch_async(dispatch_get_main_queue(), closure)
   }
   
+  // Dispatch on main queue after delay
+  func delayExec(delay: Double, closure: ()->()) {
+    dispatch_after(
+      dispatch_time(
+        DISPATCH_TIME_NOW,
+        Int64(delay * Double(NSEC_PER_SEC))
+      ),
+      dispatch_get_main_queue(), closure)
+  }
 }
-

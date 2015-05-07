@@ -22,7 +22,31 @@ class DataSync: NSObject {
     return Singleton.instance
   }
   
-  // MARK: - Fetch Data  
+  // MARK: - Fetch Data
+  
+  // MARK: Vacancy
+  
+  func fetchVacancy() -> BFTask {
+    let query = Vacancy.query()!
+    return query.getFirstObjectInBackground().continueWithBlock {
+      (task: BFTask!) -> BFTask! in
+      switch task {
+        // Cancelled
+      case let task where task.cancelled:
+        self.errorSyncFail(NSError(domain: "com.eithanshavit.SlackMeetTweet", code: 100, userInfo: task.error.userInfo))
+        // Error
+      case let task where task.error != nil:
+        self.errorSyncFail(NSError(domain: "com.eithanshavit.SlackMeetTweet", code: 101, userInfo: task.error.userInfo))
+        // Success
+      default:
+        let vacancy = task.result as! Vacancy
+        return BFTask(result: vacancy)
+      }
+      return nil
+    }
+  }
+  
+  // MARK: Pointer
   
   func fetchPointer() -> BFTask {
     let query = Pointer.query()!
@@ -43,6 +67,8 @@ class DataSync: NSObject {
       return nil
     }
   }
+  
+  // MARK: Tweet
   
   func fetchTweetCount() -> BFTask {
     let query = Tweet.query()!

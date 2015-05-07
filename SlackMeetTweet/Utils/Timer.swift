@@ -8,6 +8,7 @@
 
 import Foundation
 
+// A utility class to provide a simple interval timer with block code execution
 class Timer: NSObject {
   
   var timer = NSTimer()

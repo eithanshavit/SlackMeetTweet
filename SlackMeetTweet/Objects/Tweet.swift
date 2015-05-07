@@ -29,4 +29,3 @@ class Tweet : PFObject, PFSubclassing {
     return "Tweet"
   }
 }
-

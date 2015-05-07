@@ -14,10 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
 
-
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     
     // Initialize Parse.
+    // Yes, these are my keys... Go ahead, have fun.
     Parse.setApplicationId("IXcp3yB64CEKr6JZ38WGF3b1Iqr9tfbidpNztSTP",
       clientKey: "zFNObXmy1XsfVcKD0LqZSUAthD2D23W8yU4TffDp")
     
@@ -48,4 +48,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-

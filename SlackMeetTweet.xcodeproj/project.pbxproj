@@ -30,6 +30,7 @@
 		D0DE202B1AFBFBC7000DF943 /* DataSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DE202A1AFBFBC7000DF943 /* DataSync.swift */; };
 		D0DE20301AFBFE4B000DF943 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DE202F1AFBFE4B000DF943 /* Tweet.swift */; };
 		D0DE20321AFBFF5E000DF943 /* Pointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DE20311AFBFF5E000DF943 /* Pointer.swift */; };
+		D0DE20341AFC24DF000DF943 /* Vacancy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DE20331AFC24DF000DF943 /* Vacancy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		D0DE202C1AFBFE12000DF943 /* SlackMeetTweet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SlackMeetTweet-Bridging-Header.h"; sourceTree = "<group>"; };
 		D0DE202F1AFBFE4B000DF943 /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tweet.swift; path = Objects/Tweet.swift; sourceTree = "<group>"; };
 		D0DE20311AFBFF5E000DF943 /* Pointer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pointer.swift; path = Objects/Pointer.swift; sourceTree = "<group>"; };
+		D0DE20331AFC24DF000DF943 /* Vacancy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Vacancy.swift; path = Objects/Vacancy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +213,7 @@
 		D0DE20241AFBFB17000DF943 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				D0DE20331AFC24DF000DF943 /* Vacancy.swift */,
 				D0DE202A1AFBFBC7000DF943 /* DataSync.swift */,
 				D0DE202F1AFBFE4B000DF943 /* Tweet.swift */,
 				D0DE20311AFBFF5E000DF943 /* Pointer.swift */,
@@ -329,6 +332,7 @@
 				D0DE202B1AFBFBC7000DF943 /* DataSync.swift in Sources */,
 				D0DE20301AFBFE4B000DF943 /* Tweet.swift in Sources */,
 				D0DE20281AFBFB56000DF943 /* ViewController.swift in Sources */,
+				D0DE20341AFC24DF000DF943 /* Vacancy.swift in Sources */,
 				D0996BC41AFB2ACB00DB16C5 /* AppDelegate.swift in Sources */,
 				D0DE20261AFBFB41000DF943 /* Timer.swift in Sources */,
 				D0DE20321AFBFF5E000DF943 /* Pointer.swift in Sources */,
