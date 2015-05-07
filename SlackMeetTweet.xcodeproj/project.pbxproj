@@ -13,6 +13,19 @@
 		D0996BCB1AFB2ACB00DB16C5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0996BCA1AFB2ACB00DB16C5 /* Images.xcassets */; };
 		D0996BCE1AFB2ACB00DB16C5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0996BCC1AFB2ACB00DB16C5 /* LaunchScreen.xib */; };
 		D0996BDA1AFB2ACB00DB16C5 /* SlackMeetTweetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0996BD91AFB2ACB00DB16C5 /* SlackMeetTweetTests.swift */; };
+		D0DE20051AFB2F6C000DF943 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DE20031AFB2F6C000DF943 /* Bolts.framework */; };
+		D0DE20061AFB2F6C000DF943 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DE20041AFB2F6C000DF943 /* Parse.framework */; };
+		D0DE20081AFB2F8D000DF943 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DE20071AFB2F8D000DF943 /* AudioToolbox.framework */; };
+		D0DE200A1AFB2F96000DF943 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DE20091AFB2F96000DF943 /* CFNetwork.framework */; };
+		D0DE200C1AFB2FA6000DF943 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DE200B1AFB2FA6000DF943 /* CoreGraphics.framework */; };
+		D0DE200E1AFB2FAE000DF943 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DE200D1AFB2FAE000DF943 /* CoreLocation.framework */; };
+		D0DE20101AFB2FBD000DF943 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DE200F1AFB2FBD000DF943 /* MobileCoreServices.framework */; };
+		D0DE20121AFB2FC7000DF943 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DE20111AFB2FC7000DF943 /* QuartzCore.framework */; };
+		D0DE20141AFB2FCF000DF943 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DE20131AFB2FCF000DF943 /* Security.framework */; };
+		D0DE20161AFB2FD7000DF943 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DE20151AFB2FD7000DF943 /* StoreKit.framework */; };
+		D0DE20181AFB2FDF000DF943 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DE20171AFB2FDF000DF943 /* SystemConfiguration.framework */; };
+		D0DE201A1AFB2FE7000DF943 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DE20191AFB2FE7000DF943 /* libz.dylib */; };
+		D0DE201C1AFB2FEE000DF943 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DE201B1AFB2FEE000DF943 /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +49,19 @@
 		D0996BD31AFB2ACB00DB16C5 /* SlackMeetTweetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlackMeetTweetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0996BD81AFB2ACB00DB16C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0996BD91AFB2ACB00DB16C5 /* SlackMeetTweetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlackMeetTweetTests.swift; sourceTree = "<group>"; };
+		D0DE20031AFB2F6C000DF943 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		D0DE20041AFB2F6C000DF943 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		D0DE20071AFB2F8D000DF943 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D0DE20091AFB2F96000DF943 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		D0DE200B1AFB2FA6000DF943 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D0DE200D1AFB2FAE000DF943 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D0DE200F1AFB2FBD000DF943 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		D0DE20111AFB2FC7000DF943 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D0DE20131AFB2FCF000DF943 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		D0DE20151AFB2FD7000DF943 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		D0DE20171AFB2FDF000DF943 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D0DE20191AFB2FE7000DF943 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		D0DE201B1AFB2FEE000DF943 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +69,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0DE201C1AFB2FEE000DF943 /* libsqlite3.dylib in Frameworks */,
+				D0DE201A1AFB2FE7000DF943 /* libz.dylib in Frameworks */,
+				D0DE20181AFB2FDF000DF943 /* SystemConfiguration.framework in Frameworks */,
+				D0DE20161AFB2FD7000DF943 /* StoreKit.framework in Frameworks */,
+				D0DE20141AFB2FCF000DF943 /* Security.framework in Frameworks */,
+				D0DE20121AFB2FC7000DF943 /* QuartzCore.framework in Frameworks */,
+				D0DE20101AFB2FBD000DF943 /* MobileCoreServices.framework in Frameworks */,
+				D0DE200E1AFB2FAE000DF943 /* CoreLocation.framework in Frameworks */,
+				D0DE200C1AFB2FA6000DF943 /* CoreGraphics.framework in Frameworks */,
+				D0DE200A1AFB2F96000DF943 /* CFNetwork.framework in Frameworks */,
+				D0DE20081AFB2F8D000DF943 /* AudioToolbox.framework in Frameworks */,
+				D0DE20061AFB2F6C000DF943 /* Parse.framework in Frameworks */,
+				D0DE20051AFB2F6C000DF943 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +98,17 @@
 		D0996BB51AFB2ACB00DB16C5 = {
 			isa = PBXGroup;
 			children = (
+				D0DE201B1AFB2FEE000DF943 /* libsqlite3.dylib */,
+				D0DE20191AFB2FE7000DF943 /* libz.dylib */,
+				D0DE20171AFB2FDF000DF943 /* SystemConfiguration.framework */,
+				D0DE20151AFB2FD7000DF943 /* StoreKit.framework */,
+				D0DE20131AFB2FCF000DF943 /* Security.framework */,
+				D0DE20111AFB2FC7000DF943 /* QuartzCore.framework */,
+				D0DE200F1AFB2FBD000DF943 /* MobileCoreServices.framework */,
+				D0DE200D1AFB2FAE000DF943 /* CoreLocation.framework */,
+				D0DE200B1AFB2FA6000DF943 /* CoreGraphics.framework */,
+				D0DE20091AFB2F96000DF943 /* CFNetwork.framework */,
+				D0DE20071AFB2F8D000DF943 /* AudioToolbox.framework */,
 				D0996BC01AFB2ACB00DB16C5 /* SlackMeetTweet */,
 				D0996BD61AFB2ACB00DB16C5 /* SlackMeetTweetTests */,
 				D0996BBF1AFB2ACB00DB16C5 /* Products */,
@@ -77,6 +127,7 @@
 		D0996BC01AFB2ACB00DB16C5 /* SlackMeetTweet */ = {
 			isa = PBXGroup;
 			children = (
+				D0DE20021AFB2F4B000DF943 /* Frameworks */,
 				D0996BC31AFB2ACB00DB16C5 /* AppDelegate.swift */,
 				D0996BC51AFB2ACB00DB16C5 /* ViewController.swift */,
 				D0996BC71AFB2ACB00DB16C5 /* Main.storyboard */,
@@ -110,6 +161,15 @@
 				D0996BD81AFB2ACB00DB16C5 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0DE20021AFB2F4B000DF943 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0DE20031AFB2F6C000DF943 /* Bolts.framework */,
+				D0DE20041AFB2F6C000DF943 /* Parse.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +402,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SlackMeetTweet",
+				);
 				INFOPLIST_FILE = SlackMeetTweet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -352,6 +416,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SlackMeetTweet",
+				);
 				INFOPLIST_FILE = SlackMeetTweet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -411,6 +479,7 @@
 				D0996BDF1AFB2ACB00DB16C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0996BE01AFB2ACB00DB16C5 /* Build configuration list for PBXNativeTarget "SlackMeetTweetTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +488,7 @@
 				D0996BE21AFB2ACB00DB16C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
