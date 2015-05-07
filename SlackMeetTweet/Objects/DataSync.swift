@@ -44,9 +44,30 @@ class DataSync: NSObject {
     }
   }
   
-  func fetchTweetBySlot(slot: Int) -> BFTask {
+  func fetchTweetCount() -> BFTask {
     let query = Tweet.query()!
-    query.whereKey("slot", equalTo: slot)
+    return query.countObjectsInBackground().continueWithBlock {
+      (task: BFTask!) -> BFTask! in
+      switch task {
+        // Cancelled
+      case let task where task.cancelled:
+        self.errorSyncFail(NSError(domain: "com.eithanshavit.SlackMeetTweet", code: 100, userInfo: task.error.userInfo))
+        // Error
+      case let task where task.error != nil:
+        self.errorSyncFail(NSError(domain: "com.eithanshavit.SlackMeetTweet", code: 101, userInfo: task.error.userInfo))
+        // Success
+      default:
+        let count = task.result as! Int
+        return BFTask(result: count)
+      }
+      return nil
+    }
+  }
+  
+  func fetchTweetByIndex(index: Int) -> BFTask {
+    let query = Tweet.query()!
+    query.orderByAscending("slot")
+    query.skip = index
     return query.getFirstObjectInBackground().continueWithBlock {
       (task: BFTask!) -> BFTask! in
       switch task {
@@ -58,42 +79,15 @@ class DataSync: NSObject {
         self.errorSyncFail(NSError(domain: "com.eithanshavit.SlackMeetTweet", code: 101, userInfo: task.error.userInfo))
         // Success
       default:
-        let tweet = task.result as! Tweet
-        return BFTask(result: tweet)
+        if let tweet = task.result as? Tweet {
+          return BFTask(result: tweet)
+        }
+        return BFTask(result: nil)
       }
       return nil
     }
     
   }
-  
-  
-  
-  /*
-  func refreshChatGroupsForUser(user: SLKUser, dataStack: SLKDataStack) -> BFTask {
-    if DebugOffline {
-      return BFTask(result: nil)
-    }
-    
-    // Fetch all chat groups
-    return fetchChatGroupsForUser(user).continueWithBlock {
-      (task: BFTask!) -> BFTask! in
-      switch task {
-      // Cancelled
-      case let task where task.cancelled:
-        self.errorSyncFail(selekError(201, nil))
-      // Error
-      case let task where task.error != nil:
-        self.errorSyncFail(selekError(202, task.error.userInfo))
-      // Success
-      default:
-        let cloudChatGroups = task.result as! [PFObject]
-        // Sync with local store
-        self.syncChatGroupsForUser(cloudChatGroups: cloudChatGroups, user: user, dataStack: dataStack)
-      }
-      return nil
-    }
-  }
-*/
   
   // MARK: - Error handling
   

@@ -13,7 +13,9 @@ class ViewController: UIViewController {
   
   // MARK: - State
   
-  var index: Int = 0
+  var index: Int = -1
+  var dataSync = DataSync.sharedInstance
+  var timer: Timer!
   
   // MARK: Outlets
   
@@ -28,7 +30,10 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    timer = Timer(interval: 15, repeat: true, repeatCount: nil) {
+      self.fetchTweet()
+    }
+    timer.start()
   }
   
   override func didReceiveMemoryWarning() {
@@ -39,12 +44,25 @@ class ViewController: UIViewController {
   // MARK: - Data
   
   func fetchTweet() {
-    DataSync.sharedInstance.fetchPointer().continueWithSuccessBlock {
+    // First count tweets
+    dataSync.fetchTweetCount().continueWithSuccessBlock({
       (task: BFTask!) -> BFTask! in
-      let pointer = task.result as! Pointer
-      
+      let tweetCount = task.result as! Int
+      self.index = (self.index + 1) % tweetCount
+      return self.dataSync.fetchTweetByIndex(self.index)
+    // Then fetch tweet by index
+    }).continueWithSuccessBlock({
+      (task: BFTask!) -> BFTask! in
+      let tweet = task.result as! Tweet
+      self.displayTweet(tweet)
       return nil
-    }
+    })
+  }
+  
+  // MARK: - UI
+  
+  func displayTweet(tweet: Tweet) {
+    println("displaying tweet - \(tweet.payload)")
   }
   
 }

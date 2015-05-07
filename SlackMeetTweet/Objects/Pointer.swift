@@ -11,7 +11,7 @@ import Parse
 
 class Pointer : PFObject, PFSubclassing {
   
-  @NSManaged var maxEntries: Int
+  @NSManaged var slotsAllowed: Int
   @NSManaged var index: Int
   
   override class func initialize() {
