@@ -100,15 +100,6 @@
 			children = (
 				D0DE201B1AFB2FEE000DF943 /* libsqlite3.dylib */,
 				D0DE20191AFB2FE7000DF943 /* libz.dylib */,
-				D0DE20171AFB2FDF000DF943 /* SystemConfiguration.framework */,
-				D0DE20151AFB2FD7000DF943 /* StoreKit.framework */,
-				D0DE20131AFB2FCF000DF943 /* Security.framework */,
-				D0DE20111AFB2FC7000DF943 /* QuartzCore.framework */,
-				D0DE200F1AFB2FBD000DF943 /* MobileCoreServices.framework */,
-				D0DE200D1AFB2FAE000DF943 /* CoreLocation.framework */,
-				D0DE200B1AFB2FA6000DF943 /* CoreGraphics.framework */,
-				D0DE20091AFB2F96000DF943 /* CFNetwork.framework */,
-				D0DE20071AFB2F8D000DF943 /* AudioToolbox.framework */,
 				D0996BC01AFB2ACB00DB16C5 /* SlackMeetTweet */,
 				D0996BD61AFB2ACB00DB16C5 /* SlackMeetTweetTests */,
 				D0996BBF1AFB2ACB00DB16C5 /* Products */,
@@ -166,6 +157,15 @@
 		D0DE20021AFB2F4B000DF943 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D0DE20171AFB2FDF000DF943 /* SystemConfiguration.framework */,
+				D0DE20151AFB2FD7000DF943 /* StoreKit.framework */,
+				D0DE20131AFB2FCF000DF943 /* Security.framework */,
+				D0DE20111AFB2FC7000DF943 /* QuartzCore.framework */,
+				D0DE200F1AFB2FBD000DF943 /* MobileCoreServices.framework */,
+				D0DE200D1AFB2FAE000DF943 /* CoreLocation.framework */,
+				D0DE200B1AFB2FA6000DF943 /* CoreGraphics.framework */,
+				D0DE20091AFB2F96000DF943 /* CFNetwork.framework */,
+				D0DE20071AFB2F8D000DF943 /* AudioToolbox.framework */,
 				D0DE20031AFB2F6C000DF943 /* Bolts.framework */,
 				D0DE20041AFB2F6C000DF943 /* Parse.framework */,
 			);
