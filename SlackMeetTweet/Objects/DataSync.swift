@@ -44,6 +44,28 @@ class DataSync: NSObject {
     }
   }
   
+  func fetchTweetBySlot(slot: Int) -> BFTask {
+    let query = Tweet.query()!
+    query.whereKey("slot", equalTo: slot)
+    return query.getFirstObjectInBackground().continueWithBlock {
+      (task: BFTask!) -> BFTask! in
+      switch task {
+        // Cancelled
+      case let task where task.cancelled:
+        self.errorSyncFail(NSError(domain: "com.eithanshavit.SlackMeetTweet", code: 100, userInfo: task.error.userInfo))
+        // Error
+      case let task where task.error != nil:
+        self.errorSyncFail(NSError(domain: "com.eithanshavit.SlackMeetTweet", code: 101, userInfo: task.error.userInfo))
+        // Success
+      default:
+        let tweet = task.result as! Tweet
+        return BFTask(result: tweet)
+      }
+      return nil
+    }
+    
+  }
+  
   
   
   /*

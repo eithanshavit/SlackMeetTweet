@@ -13,7 +13,7 @@ class ViewController: UIViewController {
   
   // MARK: - State
   
-  var cloudPointer: Pointer!
+  var index: Int = 0
   
   // MARK: Outlets
   
@@ -38,10 +38,11 @@ class ViewController: UIViewController {
   
   // MARK: - Data
   
-  func fetchPointer() {
+  func fetchTweet() {
     DataSync.sharedInstance.fetchPointer().continueWithSuccessBlock {
       (task: BFTask!) -> BFTask! in
-      self.cloudPointer = task.result as! Pointer
+      let pointer = task.result as! Pointer
+      
       return nil
     }
   }

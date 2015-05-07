@@ -35,7 +35,7 @@ Parse.Cloud.define("tweet", function(req, res) {
     return pointer.save();
   // Find tweet
   }).then(function(pointer) {
-    tweetIndex = pointer.get("index") % pointer.get("maxEntries");
+    tweetIndex = pointer.get("index") % pointer.get("slotsAllowed");
     var tweetQuery = new Parse.Query(Tweet);
     tweetQuery.equalTo("slot", tweetIndex);
     return tweetQuery.first();
