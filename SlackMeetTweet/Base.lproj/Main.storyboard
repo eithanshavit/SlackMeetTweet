@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,7 +16,65 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nyf-32-9Ht" userLabel="barView">
+                                <rect key="frame" x="0.0" y="678" width="1024" height="90"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="on Aug 12th 08:15am" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fy7-Oe-Eyh" userLabel="dateLabel">
+                                        <rect key="frame" x="156" y="29" width="254" height="33"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="28"/>
+                                        <color key="textColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@user" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJr-hk-4yb" userLabel="userLabel">
+                                        <rect key="frame" x="40" y="23" width="96" height="44"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="38"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1CN-Mx-vqY" userLabel="indicatorImage">
+                                        <rect key="frame" x="934" y="20" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="U7a-9N-gwJ"/>
+                                            <constraint firstAttribute="width" secondItem="1CN-Mx-vqY" secondAttribute="height" multiplier="1:1" id="pVH-ra-Tn2"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="1CN-Mx-vqY" firstAttribute="trailing" secondItem="Nyf-32-9Ht" secondAttribute="trailing" constant="-40" id="CNp-Ux-h2b"/>
+                                    <constraint firstItem="GJr-hk-4yb" firstAttribute="leading" secondItem="Nyf-32-9Ht" secondAttribute="leading" constant="40" id="MtJ-To-sEz"/>
+                                    <constraint firstAttribute="centerY" secondItem="1CN-Mx-vqY" secondAttribute="centerY" id="PuA-9l-RYW"/>
+                                    <constraint firstAttribute="centerY" secondItem="Fy7-Oe-Eyh" secondAttribute="centerY" id="VQb-6i-NOs"/>
+                                    <constraint firstItem="Fy7-Oe-Eyh" firstAttribute="leading" secondItem="GJr-hk-4yb" secondAttribute="trailing" constant="20" id="gXG-vC-CL9"/>
+                                    <constraint firstAttribute="height" constant="90" id="jxM-Ft-gtn"/>
+                                    <constraint firstAttribute="centerY" secondItem="GJr-hk-4yb" secondAttribute="centerY" id="sNN-Ii-4cG"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;last week's party was awesome!!!&quot;" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="59" translatesAutoresizingMaskIntoConstraints="NO" id="Zgh-pH-1UH" userLabel="Label">
+                                <rect key="frame" x="60" y="80" width="904" height="538"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="126"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gLU-bu-K5X" userLabel="imageView">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gLU-bu-K5X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7on-Wt-A9S"/>
+                            <constraint firstItem="Zgh-pH-1UH" firstAttribute="bottom" secondItem="Nyf-32-9Ht" secondAttribute="top" constant="-60" id="Ftf-7P-tu4"/>
+                            <constraint firstItem="Zgh-pH-1UH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="H59-mn-RRw"/>
+                            <constraint firstItem="gLU-bu-K5X" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="K0U-ag-USL"/>
+                            <constraint firstItem="Nyf-32-9Ht" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YuW-oP-hBc"/>
+                            <constraint firstAttribute="trailing" secondItem="gLU-bu-K5X" secondAttribute="trailing" id="bul-NN-Jzu"/>
+                            <constraint firstAttribute="trailing" secondItem="Nyf-32-9Ht" secondAttribute="trailing" id="cWw-sB-TJz"/>
+                            <constraint firstAttribute="trailing" secondItem="Zgh-pH-1UH" secondAttribute="trailing" constant="60" id="d0B-Si-qtw"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Nyf-32-9Ht" secondAttribute="bottom" id="hID-Rp-bRf"/>
+                            <constraint firstItem="Zgh-pH-1UH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="60" id="rMn-Uj-98o"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gLU-bu-K5X" secondAttribute="bottom" id="zkA-kx-avN"/>
+                        </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
