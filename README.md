@@ -16,7 +16,7 @@ In this case I used [Parse](http://www.parse.com) to listen to the POST requests
 This repo hosts the Swift code for the iPad app, and the Parse CloudCode for the POST requests.
 
 
-### To Do
+### TODO
 
 Due to time constraints, this is a very quick implementation. A bunch of stuff to do next:
 
