@@ -11,7 +11,7 @@ Anyone within a company can easily post anything using a convenient Slack [slash
 ![Slack slash command](Assets/slashcommand.png)
 
 The *slash command* is sending a POST request to a server that records the tweet in a database. The app polls the database every time it wants to display the next tweet.  
-In this case I used Parse to listen to the POST requests, and to host the data. They just make it too simple to do. But in a real deployment this could easily be ported to the company's servers.
+In this case I used Parse to listen to the POST requests, and to host the data. They just make it so easy to do. But in a real deployment this could easily be ported to the company's servers.
 
 
 ### To Do
