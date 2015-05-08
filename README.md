@@ -1,4 +1,4 @@
-# SlackTweetMeet
+# SlackMeetTweet
 
 Some companies have iPads in conference rooms that help manage the room's schedule. I thought it would be cool to use these iPads to show content posted by people working in the company. This content (or private 'tweets') can be fun quotes or photos to display in the workplace.
 
